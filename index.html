@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+            color: #87CEEB;
+            text-align: center;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #87CEEB;
+            border-radius: 5px;
+            outline: none;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #87CEEB;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #5f9ea0;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .qa-section {
+            margin-top: 40px;
+        }
+
+        .qa-item {
+            margin-bottom: 20px;
+        }
+
+        .qa-item h3 {
+            color: #87CEEB;
+            margin-bottom: 5px;
+        }
+
+        .qa-item p {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div>
+            <label for="letters">Number of Letters:</label>
+            <input type="number" id="letters" name="letters" value="5">
+        </div>
+        <div>
+            <label for="numbers">Number of Numbers:</label>
+            <input type="number" id="numbers" name="numbers" value="3">
+        </div>
+        <div>
+            <label for="symbols">Number of Symbols:</label>
+            <input type="number" id="symbols" name="symbols" value="2">
+        </div>
+        <button onclick="generatePassword()">Generate Password</button>
+        <div class="output">
+            <p>Your password is: <span id="passwordOutput"></span></p>
+        </div>
+
+        <div class="qa-section">
+            <h2>Questions and Answers</h2>
+            <div class="qa-item">
+                <h3>Q: What is a strong password?</h3>
+                <p>A: A strong password is typically long, contains a mix of uppercase and lowercase letters, numbers, and symbols, and doesn't use common words or personal information.</p>
+            </div>
+            <div class="qa-item">
+                <h3>Q: Why use a password generator?</h3>
+                <p>A: Password generators create random, complex passwords that are much harder to guess or crack than human-created passwords.</p>
+            </div>
+            <!-- Add more Q&A items as needed -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
